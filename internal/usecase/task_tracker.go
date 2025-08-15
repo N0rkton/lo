@@ -76,7 +76,7 @@ func (t *Tracker) ListTasks() ([]entity.Task, error) {
 		return nil, errors.New("no tasks found")
 	}
 
-	taskList := make([]entity.Task, len(t.tasks))
+	taskList := make([]entity.Task, 0, len(t.tasks))
 
 	for _, task := range t.tasks {
 		taskList = append(taskList, task)
